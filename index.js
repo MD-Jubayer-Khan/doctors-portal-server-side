@@ -46,7 +46,8 @@ async function run () {
           res.send(users);
         });
 
-
+        // admin features
+        
        app.get('/admin/:email', async(req, res) =>{
          const email = req.params.email;
          const user = await userCollection.findOne({email: email});
